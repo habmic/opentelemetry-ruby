@@ -1,12 +1,7 @@
 ---
-title: "Ruby Quick Start Guide"
-weight: 24
-description: >
-  <img width="35" src="https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/32x32/Ruby_SDK.svg"></img>
-  A language-specific implementation of OpenTelemetry in Ruby.
+title: "Getting Started"
+weight: 1
 ---
-
-## Quick Start
 
 [OpenTelemetry for Ruby][repository] can be used to add automatic and manual instrumentation to your applications.
 Automatic instrumentation is enabled by adding [instrumentation packages][auto-instrumentation].
@@ -68,10 +63,10 @@ $> git clone git@github.com:open-telemetry/opentelemetry-ruby.git; \
 ```
 
 Next, you'll have to let the SDK know where the collector endpoint is to receive traces.
-Set the [`OTEL_EXPORTER_OTLP_ENDPOINT`][sdk-env] environment variable to `http://localhost:4318/v1/traces`:
+Set the [`OTEL_EXPORTER_OTLP_ENDPOINT`][sdk-env] environment variable to `http://0.0.0.0:4318`:
 
 ```bash
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318/v1/traces
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4318
 ```
 
 Now, start up your application and perform a few operations to generate tracing data, e.g. navigate around your web app or kick off background tasks.
@@ -91,6 +86,6 @@ Adding tracing to a single service is a great first step and although auto-instr
 [repository]: https://github.com/open-telemetry/opentelemetry-ruby
 [auto-instrumentation]: https://github.com/open-telemetry/opentelemetry-ruby#instrumentation-libraries
 [sdk-env]: https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md#configuration-options
-[context-propagation]: context_propagation.md
-[events]: events.md
-[manual-instrumentation]: manual_instrumentation.md
+[context-propagation]: ../context_propagation
+[events]: ../events
+[manual-instrumentation]: ../manual_instrumentation
